@@ -1,12 +1,14 @@
 import React from "react";
 import Data from "./components/data";
 import './App.css'
+import './components/Data.css'
 export default function App(){
   return(<div className="App">
     <h1>REAL-TIME CRYPTOCURRENCY PRICES</h1>
     <Data ></Data>
-</div>)}
-// }
+    <p className='footer'>No more data available.</p>
+</div>)
+}
 // import './App.css';
 // import { useState, useEffect } from 'react';
 // import Coin from './components/button';
