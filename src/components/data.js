@@ -25,7 +25,7 @@ export default function Data(){
   },[]); 
   const [search ,setSearch]=useState('')
     const changeHandle=(e)=>{setSearch(e.target.value)}
-  const filteredCoins=data.filter((coin) => { return coin.id.toLowerCase().includes(search.toLowerCase())})
+  const filteredCoins=data.filter((coin) => { return coin.id.toLowerCase().includes(search.toLowerCase()) ||coin.symbol.toLowerCase().includes(search.toLowerCase()) })
   
   function Button(){
     return(<div>
