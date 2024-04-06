@@ -2,8 +2,8 @@ import React from "react";
 import { useState,useEffect } from "react";
 import Sort from "./sort";
 import './Data.css' 
-// import Button from "./button";
 // import INFO from './info.json'
+
 export default function Data(){
   const [data,setData]=useState([]);
  
