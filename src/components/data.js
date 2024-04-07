@@ -2,11 +2,11 @@ import React from "react";
 import { useState,useEffect } from "react";
 import Sort from "./sort";
 import './Data.css' 
-// import INFO from './info.json'
+// import data from './info.json'
 
 export default function Data(){
   const [data,setData]=useState([]);
- 
+  
   useEffect(()=>{
     // fetch("https://api.coincap.io/v2/assets")
     //   .then(response => {return response.json()})
@@ -27,7 +27,7 @@ export default function Data(){
     const changeHandle=(e)=>{setSearch(e.target.value)}
   const filteredCoins=data.filter((coin) => { return coin.id.toLowerCase().includes(search.toLowerCase()) ||coin.symbol.toLowerCase().includes(search.toLowerCase()) })
   
-  function Button(){
+  function Bar(){
     return(<div>
         <form >
              <input type='text'autoFocus='on' placeholder="Search here" className="search"
@@ -37,16 +37,18 @@ export default function Data(){
          </div>)
 }
 return(
-<p><div className="list"><Button ></Button><br></br>
-    { filteredCoins.map((data)=>{ return <Sort key={data.rank}
+<div className="list"><Bar/><br/>
+    { 
+    filteredCoins.map((data)=>{ return <div key={data.rank} ><Sort  key={data.rank} 
     id={data.id}
      image={data.image} 
      symbol={data.symbol}
      price={data.current_price}
      rank={data.market_cap_rank}
-     cap={data.market_cap}>
-     </Sort>})
-}</div>
-</p>
+     cap={data.market_cap}/></div>
+    })
+     }
+</div>
+
     )
     }

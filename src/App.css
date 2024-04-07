@@ -8,7 +8,8 @@ background-size: cover;
 background-attachment: fixed;
 }
 h1{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-transform: capitalize;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .footer{
   color:#f8fbff;
